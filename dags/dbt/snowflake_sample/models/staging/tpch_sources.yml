@@ -19,3 +19,17 @@ sources:
                   arguments:
                     to: source('tpch', 'orders')
                     field: o_orderkey
+      - name: customer
+        columns:
+          - name: c_custkey
+            tests:
+              - unique
+              - not_null
+      - name: part
+        columns:
+          - name: p_partkey
+            tests:
+              - relationships:
+                  arguments:
+                    to: source('tpch', 'lineitem')
+                    field: l_partkey
