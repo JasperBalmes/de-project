@@ -1,0 +1,40 @@
+==================== 2026-03-10T12:43:52.824426Z | 019cd7c6-7276-75b1-a221-96350d66dee4 ====================
+12:43:52.824751 [info ]: Installing dbt project and profile setup
+12:43:52.827838 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+12:43:52.828007 [info ]: Success Project created successfully!
+12:43:52.828037 [info ]: Info Project name: jaffle_shop
+12:43:52.828044 [info ]: Info Project directory: jaffle_shop
+12:43:52.828061 [info ]: Info Setting up your profile...
+12:43:52.828926 [info ]: Loading ~/.dbt/profiles.yml
+12:43:52.829702 [info ]: Info Creating new profile...
+12:43:56.288095 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+12:45:31.704968 [info ]: Success Profile written to /Users/jasper/.dbt/profiles.yml
+12:45:31.705213 [info ]: Validating profile inputs, adapters, and connection
+
+12:45:31.705373 [info ]: dbt-fusion 2.0.0-preview.143
+12:45:31.706158 [info ]: Started loading project
+12:45:31.714779 [info ]: Loading ~/.dbt/profiles.yml
+12:45:31.717733 [info ]: Finished loading project [  0.01s]
+12:45:31.718002 [info ]: Started debugging
+12:45:31.718074 [info ]: Debugging profile: dev
+12:45:31.718106 [info ]: Debugging dbt version: 2.0.0-preview.143
+12:45:31.718122 [info ]: Debugging platform: macos aarch64 (unix)
+12:45:31.718155 [info ]: Debugging adapter type: snowflake (remote)
+12:45:31.739864 [info ]: Debugging dependencies:
+  git: OK
+12:45:31.740129 [info ]: Debugging connection:
+  "account": "NMOEWGW-WE30254",
+  "user": "jasperbalmes",
+  "database": "dbt_db",
+  "warehouse": "dbt_wh",
+  "schema": "dbt_schema",
+  "role": "dbt_role"
+12:45:34.750357 [debug]: Query executed on node unknown:
+select 1 as id
+12:45:34.884883 [info ]: Debugging connection test: OK
+12:45:34.887091 [info ]: Debugged All checks passed!
+12:45:34.887428 [info ]: Finished debugging [  3.17s]
+12:45:35.071512 [info ]: New version available 2.0.0-preview.148 (run `dbt system update`)
+12:45:35.322599 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' successfully for target 'dev' [1m 42s]

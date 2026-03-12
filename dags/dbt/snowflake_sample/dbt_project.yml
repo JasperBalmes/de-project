@@ -1,0 +1,27 @@
+name: snowflake_sample
+version: '1.0.0'
+config-version: 2
+require-dbt-version: [">=1.8.0", "<2.0.0"] # Force it under 2.0
+profile: snowflake_sample
+
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+target-path: "target"
+
+seeds:
+  # Builds seeds into '<your_schema_name>_raw'
+  snowflake_sample:
+    +schema: raw
+
+models:
+  snowflake_sample:
+    staging:
+      +materialized: view
+      +snowflake_warehouse: dbt_wh
+    marts:
+      +materialized: table
+      +snowflake_warehouse: dbt_wh
